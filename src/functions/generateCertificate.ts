@@ -112,7 +112,7 @@ export const handle = async (event) => {
     statusCode: 201,
     body: JSON.stringify({
       message: "Certificate created!",
-      url: `https://igniteserverlesscertificate.s3.sa-east-1.amazonaws.com/${id}.pdf`,
+      url: `https://${process.env.BUCKET_NAME}.s3.sa-east-1.amazonaws.com/${id}.pdf`,
     }),
     headers: {
       "Content-Type": "application/json",
